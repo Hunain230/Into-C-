@@ -12,8 +12,12 @@ int main() {
 			cout << "the room and tution for in state has been reserved " << endl;
 			billis = IS + roomis;
 		}
-		else
+		else if (j == 4) {
 			billis = IS;
+		}
+		else {
+			cout << "invalid input ";
+		}
 		cout << "your bill is " << billis;
 	}
 
@@ -24,11 +28,13 @@ int main() {
 			cout << "the room and tution for in state has been reserved " << endl;
 			billos = OS + roomos;
 		}
-		else
+		else if (k == 4) {
 			billos = OS;
-		cout << "your bill is " << billos;
+		}
 	}
-	else
+	else{
 		cout << "invalid input";
+}
+cout << "your bill is " << billos;
 	return 0; 
 }
