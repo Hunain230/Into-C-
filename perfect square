@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+
+    if (number < 0) {
+        cout << "The number is not a perfect square." << endl;
+    } else {
+        int i = 0;
+        while (i * i < number) {
+            i++;
+        }
+        if (i * i == number) {
+            cout << "The number is a perfect square." << endl;
+        } else {
+            cout << "The number is not a perfect square." << endl;
+        }
+    }
+
+    return 0;
+}
