@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main() {
+
+	int IS = 3000, OS = 4500, roomis = 2500, roomos = 3500, n, billis, billos, j, k;
+	cout << "enter your choice (1 for in state  and  0 for out state ) " << endl;
+	cin >> n;
+	if (n == 1) {
+		cout << "enter 3 if you require a room and 4 if not " << endl;
+		cin >> j;
+		if (j == 3) {
+			cout << "the room and tution for in state has been reserved " << endl;
+			billis = IS + roomis;
+		}
+		else
+			billis = IS;
+		cout << "your bill is " << billis;
+	}
+
+	else if (n == 0) {
+		cout << "enter 3 if you require a room and 4 if not " << endl;
+		cin >> k;
+		if (k == 3) {
+			cout << "the room and tution for in state has been reserved " << endl;
+			billos = OS + roomos;
+		}
+		else
+			billos = OS;
+		cout << "your bill is " << billos;
+	}
+	else
+		cout << "invalid input";
+	return 0; 
+}
