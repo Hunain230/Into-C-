@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number, originalNumber, sum = 0, digit, tempNumber, digitCount = 0;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    originalNumber = number;
+    tempNumber = number;
+
+    while (tempNumber != 0) {
+        tempNumber /= 10;
+        digitCount++;
+    }
+
+    tempNumber = originalNumber; 
+
+   
+    while (tempNumber != 0) {
+        digit = tempNumber % 10;
+
+        int power = 1;
+        int base = digit;
+        int exp = digitCount;
+        while (exp > 0) {
+            power *= base;
+            exp--;
+        }
+
+        sum += power;
+        tempNumber /= 10;
+    }
+
+    if (sum == originalNumber) {
+        cout << originalNumber << " is an Armstrong number." << endl;
+    } else {
+        cout << originalNumber << " is not an Armstrong number." << endl;
+    }
+
+    return 0;
+}
