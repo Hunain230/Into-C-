@@ -21,6 +21,7 @@ int main() {
 
    
     cout << "The GCD is: " << a << endl;
-
+int lcm = (num1 * num2) / gcd;
+cout<<"LCM of the numbers is " << lcm ;
     return 0;
 }
